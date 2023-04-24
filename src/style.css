@@ -56,9 +56,11 @@ strong {
   text-align: center;
   color: black;
 }
-.weather-forecast-date,
-.weather-forecast-temperature-min {
+.weather-forecast-date {
   font-size: 16px;
+  opacity: 0.6;
+}
+.weather-forecast-temperature-min {
   opacity: 0.6;
 }
 .weather-forecast-temperature {
