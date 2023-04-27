@@ -21,6 +21,26 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `  
+        <div class="row">
+          <div class="col-2">
+            <div class="weather-forecast-date">Thu</div>
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt=""
+              width="50"
+            />
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-temperature-max">18 ºC</span
+              ><span class="weather-forecast-temperature-min"> 12 ºC</span>
+            </div>
+          </div>
+        </div>
+      `;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -86,3 +106,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
+
+displayForecast();
